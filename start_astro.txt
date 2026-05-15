@@ -1,0 +1,4 @@
+winget install Astronomer.Astro --source winget
+astro version
+astro dev init
+Astro dev start
