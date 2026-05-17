@@ -1,0 +1,23 @@
+psql -U postgres
+----------------------
+\c retail_dw
+------------------------
+CREATE TABLE dim_products(
+product_id INT PRIMARY KEY ,
+ title TEXT ,
+ category TEXT ,
+ price NUMERIC 
+ );
+------------------
+CREATE TABLE fact_sales(
+sale_id INT PRIMARY KEY ,
+product_id INT , 
+customer_id INT , 
+quantity INT , 
+price NUMERIC , 
+sale_date DATE
+);
+-----------
+\dt 
+
+

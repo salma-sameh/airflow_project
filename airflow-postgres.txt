@@ -1,0 +1,21 @@
+docker exec -it airflow_6d7b1c-postgres-1 bash
+
+psql -U airflow -d airflow
+
+psql -U postgres
+
+\du
+
+CREATE USER airflow WITH PASSWORD 'airflow';
+
+ALTER USER airflow CREATEDB;
+
+CREATE DATABASE airflow OWNER airflow;
+
+GRANT ALL PRIVILEGES ON DATABASE airflow TO airflow;
+
+\du
+
+\q
+
+psql -U airflow -d airflow
